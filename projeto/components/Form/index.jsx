@@ -16,19 +16,27 @@ export default function Form(){
     const fadeAnim = useRef(new Animated.Value(0)).current // começo invisível
 
     //executa animaçaõ
-    useEffect(() =>{
+    useEffect(() => {
         Animated.parallel([
             Animated.timing(slideAnim, {
                 toValue: 0,
                 duration: 800,
-                useNativeDrive: true,
+                useNativeDriver: true,
             }),
+
             Animated.timing(fadeAnim, {
                 toValue: 1,
                 duration: 800,
-                useNativeDrive: true
-            }).start()
-        }, [slideAnim, fadeAnim])
+                useNativeDriver: true,
+            })
+        ]).start();
+    }, [slideAnim, fadeAnim])
+
+    function imcCalculator() {
+        const heightNum = parseFloat(height);
+        const weightNum = parseFloat(weight);
+        return (weightNum / (heightNum * heightNum)).toFixed(2);
+    }
     
 
     //função calcular IMC
