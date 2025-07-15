@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         marginTop: 30,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
         bottom: 0
     },
     form:{
@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
         height: 40,
         margin: 12,
         paddingLeft: 10,
-        borderRadius: 50,
+        borderRadius: 20,
     },
     buttonCalculator:{
         width: '90%',
-        borderRadius: 50,
+        borderRadius: 20,
         backgroundColor: '#ff0043',
         padding: 14,
         justifyContent: 'center',
@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
     buttonCalculatorText:{
         fontSize: 20,
         color: '#fff',
+    }, 
+    errorMessage: {
+        color: '#ff0043',
+        paddingLeft: 20
     }
 
 })
